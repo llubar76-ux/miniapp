@@ -104,6 +104,7 @@ body {
   box-shadow: var(--shadow);
   padding: 22px 20px 20px;
   margin-bottom: 14px;
+  padding-bottom: 80px;
 }
 .name {
   font-family: 'Manrope', sans-serif;
@@ -188,24 +189,29 @@ body {
 .btn-primary .btn-arrow { color: rgba(255,255,255,0.65); }
 .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .btn-start {
-  display: block;
-  width: calc(100% - 24px);
-  margin: 8px 12px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
   padding: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   background: var(--accent);
   color: #fff;
   border: none;
-  border-radius: 14px;
+  border-radius: 0;
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.13s, transform 0.09s;
-  box-shadow: 0 4px 16px rgba(0,191,179,0.3);
+  transition: background 0.13s;
+  box-shadow: 0 -4px 16px rgba(0,191,179,0.25);
   letter-spacing: 0.01em;
+  z-index: 100;
 }
 .btn-start:hover { background: var(--accent-dark); }
-.btn-start:active { transform: scale(0.97); }
+.btn-start:active { opacity: 0.9; }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 </style>
 <div class="page">
