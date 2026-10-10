@@ -264,18 +264,10 @@ body {
 
 <script>
   function go(cmd) {
-    if (window.Telegram && window.Telegram.WebApp) {
-      window.Telegram.WebApp.sendData(cmd);
-    } else {
-      window.open('https://t.me/LyudmilaAutomationBot', '_blank');
-    }
+    window.open('https://t.me/LyudmilaAutomationBot?start=' + cmd, '_blank');
   }
   function startBot() {
-    if (window.Telegram && window.Telegram.WebApp) {
-      window.Telegram.WebApp.close();
-    } else {
-      window.open('https://t.me/LyudmilaAutomationBot', '_blank');
-    }
+    window.open('https://t.me/LyudmilaAutomationBot?start=menu', '_blank');
   }
   if (window.Telegram && window.Telegram.WebApp) {
     window.Telegram.WebApp.ready();
