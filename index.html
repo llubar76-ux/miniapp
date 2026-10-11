@@ -279,14 +279,8 @@ body {
       window.open(url, '_blank');
     }
   }
-
-    function startBot() {
-    const url = 'https://t.me/LyudmilaAutomationBot?start=start';
-    if (tg) {
-      tg.openTelegramLink(url);
-      tg.close();
-    } else {
-      window.open(url, '_blank');
-    }
-  }
+function startBot() {
+  go('start');
+}
 </script>
+
