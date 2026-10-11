@@ -265,22 +265,28 @@ body {
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
   const tg = window.Telegram?.WebApp;
-  if (tg) { tg.ready(); tg.expand(); }
+  if (tg) { 
+    tg.ready(); 
+    tg.expand(); 
+  }
 
   function go(cmd) {
     const url = 'https://t.me/LyudmilaAutomationBot?start=' + cmd;
     if (tg) {
       tg.openTelegramLink(url);
+      tg.close();
     } else {
       window.open(url, '_blank');
     }
   }
 
   function startBot() {
+    const url = 'https://t.me/LyudmilaAutomationBot?start=start';
     if (tg) {
+      tg.openTelegramLink(url);
       tg.close();
     } else {
-      window.open('https://t.me/LyudmilaAutomationBot', '_blank');
+      window.open(url, '_blank');
     }
   }
 </script>
