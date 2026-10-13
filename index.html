@@ -275,16 +275,10 @@ body {
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
 
-  function go(section) {
-    const tg = window.Telegram?.WebApp;
-    if (tg) {
-      tg.close();
-    }
+   function go(section) {
+    window.Telegram?.WebApp?.close();
   }
 
   function startBot() {
-    const tg = window.Telegram?.WebApp;
-    if (tg) {
-      tg.close();
-    }
+    window.Telegram?.WebApp?.close();
   }
