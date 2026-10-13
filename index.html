@@ -268,12 +268,12 @@ body {
     tg.ready();
     tg.expand();
     setTimeout(() => tg.expand(), 300);
-    try { tg.requestFullscreen?.(); } catch(e) {}
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
   function go(cmd) {
     if (tg) {
       tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=' + cmd);
+      setTimeout(() => tg.close(), 300);
     } else {
       window.open('https://t.me/LyudmilaAutomationBot', '_blank');
     }
