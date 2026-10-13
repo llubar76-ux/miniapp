@@ -271,7 +271,6 @@ body {
     try { tg.requestFullscreen?.(); } catch(e) {}
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
-
   function go(cmd) {
     if (tg) {
       tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=' + cmd);
@@ -279,12 +278,7 @@ body {
       window.open('https://t.me/LyudmilaAutomationBot', '_blank');
     }
   }
-
   function startBot() {
-    if (tg) {
-      tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=start');
-    } else {
-      window.open('https://t.me/LyudmilaAutomationBot', '_blank');
-    }
+    go('start');
   }
 </script>
