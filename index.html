@@ -274,7 +274,7 @@ body {
 
   function go(cmd) {
     if (tg) {
-      tg.sendData(cmd);
+      tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=' + cmd);
     } else {
       window.open('https://t.me/LyudmilaAutomationBot', '_blank');
     }
@@ -282,7 +282,7 @@ body {
 
   function startBot() {
     if (tg) {
-      tg.sendData('start');
+      tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=start');
     } else {
       window.open('https://t.me/LyudmilaAutomationBot', '_blank');
     }
