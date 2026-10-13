@@ -199,7 +199,7 @@ body {
   border: none;
   border-radius: 0;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.13s;
@@ -282,3 +282,16 @@ body {
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
 
+  function go(section) {
+    const tg = window.Telegram?.WebApp;
+    if (tg) {
+      tg.close();
+    }
+  }
+
+  function startBot() {
+    const tg = window.Telegram?.WebApp;
+    if (tg) {
+      tg.close();
+    }
+  }
