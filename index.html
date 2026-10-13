@@ -267,12 +267,15 @@ body {
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
   const tg = window.Telegram?.WebApp;
-  if (tg) {
-    tg.ready();
-    tg.expand();
-    setTimeout(() => tg.expand(), 300);
-    document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
-  }
+ if (tg) {
+  tg.ready();
+  tg.expand();
+  setTimeout(() => tg.expand(), 300);
+  document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
+}
+if (window.innerWidth < 500) {
+  document.querySelectorAll('.btn').forEach(b => b.style.fontSize = '20px');
+}
   function go(cmd) {
     if (tg) {
       tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=' + cmd);
