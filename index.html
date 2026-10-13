@@ -273,7 +273,8 @@ body {
   setTimeout(() => tg.expand(), 300);
   document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
 }
-  document.querySelectorAll('.btn').forEach(b => b.style.fontSize = '20px');
+  document.querySelectorAll('.btn').forEach(b => b.style.fontSize = '22px');
+  document.querySelector('.btn-start').style.fontSize = '28px';
    function go(cmd) {
     if (tg) {
       tg.openTelegramLink('https://t.me/LyudmilaAutomationBot?start=' + cmd);
