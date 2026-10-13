@@ -275,20 +275,18 @@ body {
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
 
-   function go(section) {
-    const tg = window.Telegram?.WebApp;
+     function go(section) {
     if (tg && tg.close) {
       tg.close();
     } else {
-      alert('Кнопка работает! (тест в браузере)');
+      alert('Кнопка работает!');
     }
   }
 
   function startBot() {
-    const tg = window.Telegram?.WebApp;
     if (tg && tg.close) {
       tg.close();
     } else {
-      alert('Кнопка работает! (тест в браузере)');
+      alert('Кнопка работает!');
     }
   }
