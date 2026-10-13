@@ -61,7 +61,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 .page {
   width: 100%;
@@ -192,22 +192,21 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
   padding: 28px 16px;
   padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
-  margin: 0;
-    background: var(--accent);
+  background: var(--accent);
   color: #fff;
-  font-size: 18px;
+  border: none;
   border-radius: 0;
   font-family: 'Manrope', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.13s;
   box-shadow: 0 -6px 24px rgba(0,191,179,0.45);
   letter-spacing: 0.01em;
-  z-index: 100;
+  text-align: center;
+  z-index: 9999;
 }
 .btn-start:hover { background: var(--accent-dark); }
 .btn-start:active { opacity: 0.9; }
