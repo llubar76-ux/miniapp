@@ -276,9 +276,19 @@ body {
   }
 
    function go(section) {
-    window.Telegram?.WebApp?.close();
+    const tg = window.Telegram?.WebApp;
+    if (tg && tg.close) {
+      tg.close();
+    } else {
+      alert('Кнопка работает! (тест в браузере)');
+    }
   }
 
   function startBot() {
-    window.Telegram?.WebApp?.close();
+    const tg = window.Telegram?.WebApp;
+    if (tg && tg.close) {
+      tg.close();
+    } else {
+      alert('Кнопка работает! (тест в браузере)');
+    }
   }
