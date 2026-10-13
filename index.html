@@ -271,13 +271,6 @@ body {
     try { tg.requestFullscreen?.(); } catch(e) {}
   }
 
-  const tg = window.Telegram?.WebApp;
-  if (tg) {
-    tg.ready();
-    tg.expand();
-    setTimeout(() => tg.expand(), 300);
-    try { tg.requestFullscreen?.(); } catch(e) {}
-  }
   if (tg) {
     document.querySelector('.page').style.minHeight = window.innerHeight + 'px';
   }
